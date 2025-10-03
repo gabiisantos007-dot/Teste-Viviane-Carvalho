@@ -46,7 +46,7 @@
     <!-- CAPA -->
     <div class="card" id="capaCard">
       <div class="hero">
-        <img src="capa.svg" alt="Capa do teste">
+        <img src="Venha comigo descobrir seu temperamento.svg" alt="Capa do teste">
         <br>
         <button onclick="iniciarQuiz()">Quero Descobrir</button>
       </div>
@@ -55,7 +55,7 @@
     <!-- QUIZ -->
     <div class="card hidden" id="quizCard">
       <div class="progress"><div class="bar" id="progressBar"></div></div>
-      <div class="qnum" id="qnum">Pergunta 1 de 9</div>
+      <div class="qnum" id="qnum">Pergunta 1 de 8</div>
       <h2 class="question" id="questionText">Texto da pergunta</h2>
       <div class="options" id="optionsList"></div>
       <div class="controls">
@@ -68,7 +68,7 @@
     <div class="card hidden" id="resultCard">
       <div class="result">
         <h2 id="resultTitle">Seu temperamento</h2>
-        <img src="resultado.svg" alt="Resultado">
+        <img src="Viviane Carvalho Instagram @viviacarvalho__.svg" alt="Resultado">
         <p class="desc" id="resultText"></p>
         <div style="margin-top:14px">
           <button id="restartBtn">Fazer de novo</button>
@@ -129,12 +129,6 @@ const questions = [
     {t:"Colérico", txt:"Assume a responsabilidade"},
     {t:"Melancólico", txt:"Preocupa-se com o certo e o errado"},
     {t:"Fleumático", txt:"Procura manter a paz"}
-  ]},
-  { q:"Quando você está em uma situação inesperada, o que faz mais sentido pra você?", options:[
-    {t:"Colérico", txt:"Tomo a frente e decido rápido, mesmo que depois eu ajuste"},
-    {t:"Sanguíneo", txt:"Tento deixar o ambiente leve, buscando conversar e distrair"},
-    {t:"Melancólico", txt:"Penso bem antes de agir, analisando os detalhes"},
-    {t:"Fleumático", txt:"Mantenho a calma e espero as coisas se organizarem"}
   ]}
 ];
 
@@ -247,12 +241,11 @@ restartBtn.addEventListener('click',()=>{
   capaCard.classList.remove('hidden');
 });
 
-/* botão da capa funcionando */
-window.iniciarQuiz = function(){
+function iniciarQuiz(){
   capaCard.classList.add('hidden');
   quizCard.classList.remove('hidden');
   render();
-};
+}
 </script>
 </body>
 </html>
