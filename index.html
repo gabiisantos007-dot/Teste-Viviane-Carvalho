@@ -55,7 +55,7 @@
     <!-- QUIZ -->
     <div class="card hidden" id="quizCard">
       <div class="progress"><div class="bar" id="progressBar"></div></div>
-      <div class="qnum" id="qnum">Pergunta 1 de 8</div>
+      <div class="qnum" id="qnum">Pergunta 1 de 9</div>
       <h2 class="question" id="questionText">Texto da pergunta</h2>
       <div class="options" id="optionsList"></div>
       <div class="controls">
@@ -129,6 +129,12 @@ const questions = [
     {t:"Colérico", txt:"Assume a responsabilidade"},
     {t:"Melancólico", txt:"Preocupa-se com o certo e o errado"},
     {t:"Fleumático", txt:"Procura manter a paz"}
+  ]},
+  { q:"Quando você está em uma situação inesperada, o que faz mais sentido pra você?", options:[
+    {t:"Colérico", txt:"Tomo a frente e decido rápido, mesmo que depois eu ajuste"},
+    {t:"Sanguíneo", txt:"Tento deixar o ambiente leve, buscando conversar e distrair"},
+    {t:"Melancólico", txt:"Penso bem antes de agir, analisando os detalhes"},
+    {t:"Fleumático", txt:"Mantenho a calma e espero as coisas se organizarem"}
   ]}
 ];
 
@@ -228,24 +234,4 @@ function showResult(){
     text=winners.map(w=>`${resultTexts[w].title}: ${resultTexts[w].text}`).join('\n\n');
   }
 
-  quizCard.classList.add('hidden');
-  resultCard.classList.remove('hidden');
-  resultTitle.textContent=title;
-  resultText.textContent=text;
-}
-
-restartBtn.addEventListener('click',()=>{
-  for(let i=0;i<answers.length;i++) answers[i]=null;
-  current=0;
-  resultCard.classList.add('hidden');
-  capaCard.classList.remove('hidden');
-});
-
-function iniciarQuiz(){
-  capaCard.classList.add('hidden');
-  quizCard.classList.remove('hidden');
-  render();
-}
-</script>
-</body>
-</html>
+  quizCard.clas
