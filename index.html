@@ -234,4 +234,24 @@ function showResult(){
     text=winners.map(w=>`${resultTexts[w].title}: ${resultTexts[w].text}`).join('\n\n');
   }
 
-  quizCard.clas
+  quizCard.classList.add('hidden');
+  resultCard.classList.remove('hidden');
+  resultTitle.textContent=title;
+  resultText.textContent=text;
+}
+
+restartBtn.addEventListener('click',()=>{
+  for(let i=0;i<answers.length;i++) answers[i]=null;
+  current=0;
+  resultCard.classList.add('hidden');
+  capaCard.classList.remove('hidden');
+});
+
+function iniciarQuiz(){
+  capaCard.classList.add('hidden');
+  quizCard.classList.remove('hidden');
+  render();
+}
+</script>
+</body>
+</html>
